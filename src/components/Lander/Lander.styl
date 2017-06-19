@@ -1,0 +1,62 @@
+@import '../../style/variables.styl'
+
+.lander
+  display: flex
+  align-items: center
+  margin: 0 auto
+  width: 60%
+  @media (max-width: $xl)
+    width: 60%
+  @media (max-width: $lg)
+    width: 70%
+  @media (max-width: $md)
+    width: 80%
+  @media (max-width: $sm)
+    width: 80%
+    flex-direction: column
+  @media (max-width: $xs)
+    width: 100%
+  .tile
+    height: 300px
+    box-shadow: 1px 1px 1px
+    margin: 10px
+    width: 50%
+    background-color: $tertiary
+    display: flex
+    @media (max-width: $sm)
+      width: 100%
+    >*
+      width: 100%
+      align-self: center
+      text-align: center
+      .tile-title
+        align-self: center
+        color: #FFF
+        font-size: 24px
+        margin-bottom: 20px
+      .form
+        flex-wrap: wrap
+        display: flex
+        margin: 10px
+        .session-id
+          flex: 1 0 50%
+          font-size: 16px
+          height: 36px
+          max-width: 100%
+          padding: 0 5px
+          margin: 0
+          border: 0
+        button
+          flex: 1 0 50%
+          border: none
+          display: inline-block
+          min-height: 36px
+          line-height: 18px
+          padding: 9px 2rem
+          text-transform: uppercase
+          vertical-align: middle
+          -webkit-tap-highlight-color: transparent
+          background-color: $secondary
+          color: #FFF
+          &:hover
+            background-color: $primary
